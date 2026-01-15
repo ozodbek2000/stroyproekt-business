@@ -4,52 +4,17 @@
 @use "base/root";
 @use "base/mixin" as *;
 @use "base/common";
-@use "components/header";
 @use "components/main";
-@use "components/we";
-@use "components/source";
-@use "components/service";
-@use "components/dropdown";
-@use "components/dropdown-simple";
-@use "components/cta";
-@use "components/calc";
-@use "components/map";
-@use "components/faq";
-@use "components/faq-item";
-@use "components/support";
-@use "components/story";
-@use "components/footer";
-@use "components/buh";
-@use "components/mission";
-@use "components/team";
-@use "components/feedback";
-@use "components/advan";
-@use "components/consult";
-@use "components/start";
-@use "components/latest";
-@use "components/three";
-@use "components/result";
-@use "components/partners";
-@use "components/trust";
-@use "components/want";
-@use "components/blog";
-@use "components/article";
-@use "components/form";
-@use "components/contact";
-@use "components/operator";
-
+@use "components/header";
 
 [class*="__container"] {
-    max-width: vars.$max-width;
+    max-width: 1680px;
     margin: 0 auto;
-    padding: 0px vars.$main-offset;
+    padding: 0px 15px;
     min-width: 0;
 }
 body {
-    background-color: var(--black-white);
-    color: var(--font-color);
-    font-family: var(--montserrat);
-    @media (max-width: 1080px) {
-        background-color: var(--black-white);
-    }    
+    color: var(--black);
+    font-family: var(--suisse);
+    font-weight: 400;
 }

@@ -1,134 +1,248 @@
 @font-face {
-    font-family: "Montserrat";
-    src: url('../fonts/Montserrat-Thin.ttf') format('truetype');
+    font-family: "suisse";
+    src: url("../fonts/SuisseIntl-Thin.otf") format("opentype");
     font-weight: 100;
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
-    font-family: "Montserrat";
-    src: url('../fonts/Montserrat-Light.ttf') format('truetype');
+    font-family: "suisse";
+    src: url("../fonts/SuisseIntl-ThinItalic.otf") format("opentype");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Light */
+@font-face {
+    font-family: "suisse";
+    src: url("../fonts/SuisseIntl-Light.otf") format("opentype");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
-    font-family: "Montserrat";
-    src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    font-family: "suisse";
+    src: url("../fonts/SuisseIntl-LightItalic.otf") format("opentype");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Book (обычно = 400) */
+@font-face {
+    font-family: "suisse";
+    src: url("../fonts/SuisseIntl-Book.otf") format("opentype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
+/* Regular */
 @font-face {
-    font-family: "Montserrat";
-    src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
+    font-family: "suisse";
+    src: url("../fonts/SuisseIntl-Regular.otf") format("opentype");
+    font-weight: 450;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "suisse";
+    src: url("../fonts/SuisseIntl-RegularItalic.otf") format("opentype");
+    font-weight: 450;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Medium */
+@font-face {
+    font-family: "suisse";
+    src: url("../fonts/SuisseIntl-Medium.otf") format("opentype");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
-    font-family: "Montserrat";
-    src: url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+    font-family: "suisse";
+    src: url("../fonts/SuisseIntl-MediumItalic.otf") format("opentype");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* SemiBold */
+@font-face {
+    font-family: "suisse";
+    src: url("../fonts/SuisseIntl-SemiBold.otf") format("opentype");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
-    font-family: "Montserrat";
-    src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+    font-family: "suisse";
+    src: url("../fonts/SuisseIntl-SemiBoldItalic.otf") format("opentype");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Bold */
+@font-face {
+    font-family: "suisse";
+    src: url("../fonts/SuisseIntl-Bold.otf") format("opentype");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
-    font-family: "Montserrat";
-    src: url('../fonts/Montserrat-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
+    font-family: "suisse";
+    src: url("../fonts/SuisseIntl-BoldItalic.otf") format("opentype");
+    font-weight: 700;
+    font-style: italic;
     font-display: swap;
 }
 
+/* Black */
 @font-face {
-    font-family: "Montserrat";
-    src: url('../fonts/Montserrat-Black.ttf') format('truetype');
+    font-family: "suisse";
+    src: url("../fonts/SuisseIntl-Black.otf") format("opentype");
     font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
-    font-family: "Raleway";
-    src: url('../fonts/Raleway-Thin.ttf') format('truetype');
+    font-family: "suisse";
+    src: url("../fonts/SuisseIntl-BlackItalic.otf") format("opentype");
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* UltraLight */
+@font-face {
+    font-family: "suisse";
+    src: url("../fonts/SuisseIntl-Ultralight.otf") format("opentype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "suisse";
+    src: url("../fonts/SuisseIntl-UltralightItalic.otf") format("opentype");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+/* --- Gilroy Font Family --- */
+
+/* Thin (100) */
+@font-face {
+    font-family: "gilroy";
+    src: url("../fonts/Gilroy/Gilroy-Thin.woff2") format("woff2"),
+         url("../fonts/Gilroy/Gilroy-Thin.woff") format("woff");
     font-weight: 100;
     font-style: normal;
     font-display: swap;
 }
 
+/* UltraLight (200) */
 @font-face {
-    font-family: "Raleway";
-    src: url('../fonts/Raleway-Light.ttf') format('truetype');
+    font-family: "gilroy";
+    src: url("../fonts/Gilroy/Gilroy-UltraLight.woff2") format("woff2"),
+         url("../fonts/Gilroy/Gilroy-UltraLight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Light (300) */
+@font-face {
+    font-family: "gilroy";
+    src: url("../fonts/Gilroy/Gilroy-Light.woff2") format("woff2"),
+         url("../fonts/Gilroy/Gilroy-Light.woff") format("woff"),
+         url("../fonts/Gilroy/Gilroy-Light.otf") format("opentype");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
+/* Regular (400) */
 @font-face {
-    font-family: "Raleway";
-    src: url('../fonts/Raleway-Regular.ttf') format('truetype');
+    font-family: "gilroy";
+    src: url("../fonts/Gilroy/Gilroy-Regular.woff2") format("woff2"),
+         url("../fonts/Gilroy/Gilroy-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
+/* Medium (500) */
 @font-face {
-    font-family: "Raleway";
-    src: url('../fonts/Raleway-Medium.ttf') format('truetype');
+    font-family: "gilroy";
+    src: url("../fonts/Gilroy/Gilroy-Medium.woff2") format("woff2"),
+         url("../fonts/Gilroy/Gilroy-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
+/* SemiBold (600) */
 @font-face {
-    font-family: "Raleway";
-    src: url('../fonts/Raleway-SemiBold.ttf') format('truetype');
+    font-family: "gilroy";
+    src: url("../fonts/Gilroy/Gilroy-SemiBold.woff2") format("woff2"),
+         url("../fonts/Gilroy/Gilroy-SemiBold.woff") format("woff");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
 
+/* Bold (700) */
 @font-face {
-    font-family: "Raleway";
-    src: url('../fonts/Raleway-Bold.ttf') format('truetype');
+    font-family: "gilroy";
+    src: url("../fonts/Gilroy/Gilroy-Bold.woff2") format("woff2"),
+         url("../fonts/Gilroy/Gilroy-Bold.woff") format("woff"),
+         url("../fonts/Gilroy/Gilroy-Bold.otf") format("opentype");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
+/* ExtraBold (800) */
 @font-face {
-    font-family: "Raleway";
-    src: url('../fonts/Raleway-ExtraBold.ttf') format('truetype');
+    font-family: "gilroy";
+    src: url("../fonts/Gilroy/Gilroy-ExtraBold.woff2") format("woff2"),
+         url("../fonts/Gilroy/Gilroy-ExtraBold.woff") format("woff");
     font-weight: 800;
     font-style: normal;
     font-display: swap;
 }
 
+/* Black (900) */
 @font-face {
-    font-family: "Raleway";
-    src: url('../fonts/Raleway-Black.ttf') format('truetype');
+    font-family: "gilroy";
+    src: url("../fonts/Gilroy/Gilroy-Black.woff2") format("woff2"),
+         url("../fonts/Gilroy/Gilroy-Black.woff") format("woff"),
+         url("../fonts/Gilroy/Gilroy-Black.otf") format("opentype");
     font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
 
+/* Heavy (950) */
 @font-face {
-    font-family: "Raleway";
-    src: url('../fonts/Raleway-SemiBoldItalic.ttf') format('truetype');
-    font-weight: 600;
+    font-family: "gilroy";
+    src: url("../fonts/Gilroy/Gilroy-Heavy.woff") format("woff");
+    font-weight: 950;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* --- Italic Styles (Пример для Bold Italic) --- */
+@font-face {
+    font-family: "gilroy";
+    src: url("../fonts/Gilroy/Gilroy-BoldItalic.woff2") format("woff2"),
+         url("../fonts/Gilroy/Gilroy-BoldItalic.woff") format("woff");
+    font-weight: 700;
     font-style: italic;
     font-display: swap;
 }

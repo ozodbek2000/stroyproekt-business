@@ -15,7 +15,7 @@ const del = require("del");
 const fileInclude = require("gulp-file-include");
 
 function clean() {
-    return del(["dist/**", "!dist/img/**", "!dist/img"]);
+    return del(["dist/**"]);
 }
 
 function styles() {
@@ -30,7 +30,7 @@ function styles() {
 }
 
 function fonts() {
-    return src("src/fonts/**/*.{ttf,woff,woff2}").pipe(dest("dist/fonts"));
+    return src("src/fonts/**/*.{ttf,woff,woff2,otf}").pipe(dest("dist/fonts"));
 }
 
 function scripts() {
@@ -39,8 +39,6 @@ function scripts() {
         .pipe(dest("dist/js"))
         .pipe(browserSync.stream());
 }
-
-exports.scripts = scripts;
 
 function html() {
     return src("src/html/**/*.html")
@@ -81,10 +79,19 @@ function serve() {
     watch("src/**/*.html", html);
     watch("src/fonts/**/*", fonts);
     watch("src/img/**/*", series(images));
+    watch("src/js/**/*.js", scripts);
 }
 
-exports.default = series(
+const build = series(
     clean,
-    parallel(styles, scripts, html, fonts, images),
+    parallel(styles, scripts, html, fonts, images)
+  );
+  
+  const dev = series(
+    build,
     serve
-);
+  );
+  
+  exports.build = build;
+  exports.default = dev;
+  
