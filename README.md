@@ -1,7 +1,6 @@
 # gulpsetup
 
 ## commands
-### npx gulp - Зпускает gulp сборку (вся сборка происходит в папке dist кроме img папки)
-### npx gulp scripts - Запускает скрипт index.js (можно добавить в настройках gulpfile.js постоянного отслеживание watch) 
-# stroyproekt-business
+## npx gulp - Запускает gulp сборку (вся сборка происходит в папке dist кроме img папки) 
+## npx gulp build - Запускает сбору но не включает live server
 # stroyproekt-business
