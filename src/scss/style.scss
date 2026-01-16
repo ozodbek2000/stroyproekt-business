@@ -6,6 +6,9 @@
 @use "base/common";
 @use "components/main";
 @use "components/header";
+@use "components/condition";
+@use "components/menu";
+@use "components/popup";
 
 [class*="__container"] {
     max-width: 1680px;
@@ -16,5 +19,10 @@
 body {
     color: var(--black);
     font-family: var(--suisse);
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 450;
+    
+    &.lock {
+        overflow: hidden;
+    }
 }
