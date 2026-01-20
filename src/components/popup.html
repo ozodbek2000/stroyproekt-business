@@ -1,19 +1,37 @@
 <section class="popup">
     <div class="popup__box">
-        <img src="../img/svg/close.svg" alt="close" />
+        <img class="popup__close" src="../img/svg/close.svg" alt="close" />
         <div class="popup__title title">Оставить заявку</div>
-        <div class="popup__subtitle subtitle">
-            Хотите узнать подробнее? Оставьте Ваши контакты и мы перезвоним Вам
+        <div class="popup__subtitle">
+            Хотите узнать подробнее?<br />Оставьте Ваши контакты и мы перезвоним
+            Вам
         </div>
         <div class="popup__forms">
-            <input type="text" placeholder="Имя">
-            <input type="tel" placeholder="Телефон">
+            <input type="text" placeholder="Имя" />
+            <input type="tel" placeholder="Телефон" />
         </div>
         <div class="popup__confidential">
-            Нажимая на кнопку “Отправить”, вы соглашаетесь с <a href="##">Политикой конфиденциальности</a>
+            Нажимая на кнопку “Отправить”, вы соглашаетесь с
+            <a href="##">Политикой конфиденциальности</a>
         </div>
-        <a href="##" class="popup__send">отправить заявку <img src="../img/svg/send.svg" alt="send"></a>
+        <a href="##" class="popup__send button">
+            <span>отправить заявку</span>
+            <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M11 21L21 11M21 11H11M21 11V21"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"
+                />
+            </svg>
+        </a>
     </div>
-    <div class="popup__overlay overlay">
-    </div>
+    <div class="popup__overlay overlay"></div>
 </section>

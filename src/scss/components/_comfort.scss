@@ -1,0 +1,56 @@
+.comfort {
+    margin: 200px 0px 0px 0px;
+    &__container {
+    }
+
+    &__subtitle {
+    }
+
+    &__columns {
+        display: grid;
+        grid-template-columns: minmax(0, 41%) minmax(0, 59%);
+        gap: 160px;
+        margin-top: 24px;
+    }
+
+    &__titlebox {
+        display: flex;  
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    &__title {
+        color: var(--brown);
+        max-width: 680px;
+    }
+
+    &__text {
+        max-width: 680px;
+    }
+
+    &__numbers {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__number {
+        display: flex;
+        align-items: flex-end;
+        border-bottom: 1px solid rgba($color: #7A5E48, $alpha: 0.2);
+        padding-bottom: 24px;
+        p {
+            flex: 0 1 60%;
+            color: var(--gold);
+            font-size: 64px;
+            font-weight: 500;
+        }
+        span {
+            flex: 0 1 40%;
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--black);
+            padding-bottom: 12px;
+        }
+    }
+}

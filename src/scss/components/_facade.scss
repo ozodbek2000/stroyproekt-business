@@ -1,0 +1,77 @@
+.facade {
+    margin: 200px 0px 200px 0px;
+    background: var(--green-gradient);
+    color: var(--white);
+    &__container {
+    }
+
+    &__content {
+        max-width: 40%;
+        margin-top: 137px;
+        margin-right: 150px;
+        float: right;
+        margin-bottom: -290px;
+    }
+
+    &__title {
+        max-width: 540px;
+        margin-bottom: 48px;
+        line-height: 1.2;
+        font-weight: 450;
+    }
+
+    &__text {
+    }
+
+    &__swiper {
+        margin-bottom: -125px;  
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__wrapper {
+        display: inline-flex;
+        align-items: flex-end;
+        height: 495px;
+    }
+
+    &__slide {
+        display: flex;
+        align-items: flex-end;
+        height: 300px;
+        transition: 0.6s ease-in-out width;
+        margin-bottom: -120px;
+        flex-shrink: 0;
+
+        position: relative;
+        width: 320px;
+        height: 300px;
+        flex-shrink: 0;
+        margin-bottom: -120px;
+        overflow: visible;
+        transition: 0.6s ease-in-out all;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: 0.3s ease all;
+
+            position: absolute; 
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: width 0.5s ease, height 0.5s ease;
+            will-change: width, height;
+        }
+        &.swiper-slide-active {
+            z-index: 1;
+            transform-origin: left bottom;
+            transform: scale(2.05);
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+}

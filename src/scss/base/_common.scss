@@ -83,17 +83,16 @@
     opacity: 0;
     visibility: hidden;
     transition: 0.3s ease all;
-    
+    z-index: 2;
+
     &.active {
         visibility: visible;
         opacity: 1;
     }
 }
-
-.bg-title {
+.bg-title,
+.bg-title-bottom {
     position: absolute;
-    top: 0;
-    right: -4%;
     transform: translate(-80px, 80px);
     opacity: 0;
     will-change: transform, opacity;
@@ -105,6 +104,18 @@
     color: #72584f29;
 
     transition: opacity 0.6s ease-out;
+}
+.bg-title {
+    top: 0;
+    right: -4%;
+}
+.bg-title-bottom {
+    bottom: -74px;
+    left: 0;
+    transform: translate(-80px, 80px);
+    opacity: 0;
+    will-change: transform, opacity;
+    opacity: 1;
 }
 
 .bg-title.is-visible {
@@ -128,6 +139,71 @@
     font-weight: 500;
     line-height: 1.2;
     color: var(--gold);
+}
+
+.button {
+    background: var(--gold-gradient);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 13px;
+    font-weight: 450;
+    color: var(--white);
+    display: inline-flex;
+    padding: 0px 16px;
+    height: 50px;
+    text-transform: uppercase;
+    border: 1px solid var(--gold);
+    position: relative;
+    transition: 0.3s ease all;
+
+    span {
+        z-index: 1;
+    }
+    svg {
+        z-index: 1;
+        transition: 0.3s ease all;
+    }
+    svg path {
+        transition: 0.3s ease all;
+    }
+    &:hover {
+        color: var(--gold);
+        border: 1px solid var(--gold);
+        svg {
+            transform: rotate(45deg);
+        }
+        svg path {
+            stroke: var(--gold);
+        }
+        &::before {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &:active {
+        &::before {
+            opacity: 1;
+            visibility: visible;
+            background-color: var(--gold-dark);
+        }
+        color: var(--white);
+        svg path {
+            stroke: var(--white);
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease all;
+    }
 }
 
 .subtitle {
@@ -203,6 +279,11 @@
         color: #72584f29;
 
         transition: opacity 0.6s ease-out;
+    }
+    .bg-title-bottom {
+        font-size: 64px;
+        bottom: -13px;
+        left: -4%;
     }
     .mobile-only {
         display: block !important;

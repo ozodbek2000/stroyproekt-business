@@ -9,9 +9,12 @@
 @use "components/condition";
 @use "components/menu";
 @use "components/popup";
+@use "components/comfort";
+@use "components/facade";
+
 
 [class*="__container"] {
-    max-width: 1680px;
+    max-width: 1690px;
     margin: 0 auto;
     padding: 0px 15px;
     min-width: 0;
