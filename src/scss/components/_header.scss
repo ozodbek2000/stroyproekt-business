@@ -7,7 +7,7 @@
     left: 0;
     border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
     transition: 0.3s ease all;
-    z-index: 2;
+    z-index: 3;
 
     &.border {
         border: none;
@@ -231,6 +231,7 @@
         top: -99px;
         left: 0;
         border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
+        z-index: 4;
 
         &.border {
             border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
