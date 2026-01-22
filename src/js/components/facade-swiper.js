@@ -111,6 +111,33 @@ const facadeSwiper = () => {
                 },
             },
         });
+
+        const rentSwiper = new Swiper(".rent__swiper", {
+            slidesPerView: "3.3",
+            spaceBetween: 20,
+            loop: true,
+            keyboard: { enabled: true },
+            speed: 800,
+            pagination: {
+                el: ".rent__pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".rent__navigation_next",
+                prevEl: ".rent__navigation_prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: '1.2',
+                },
+                768: {
+                    slidesPerView: '1.4',
+                },
+                1024: {
+                    slidesPerView: '4.2',
+                },
+            },
+        });
     });
 };
 

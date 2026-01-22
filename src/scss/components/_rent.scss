@@ -1,0 +1,244 @@
+.rent {
+    margin: 200px 0px 0px 0px;
+    position: relative;
+    &__container {
+    }
+
+    &__bg-title {
+        position: absolute;
+        top: -220px;
+        right: 0;
+    }
+
+    &__subtitle {
+    }
+
+    &__columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 26px;
+    }
+
+    &__content {
+        &_title {
+            color: var(--brown);
+            line-height: 1.2;
+            max-width: 680px;
+        }
+
+        &_list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 32px 0px 67px 0px;
+        }
+
+        &_list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            line-height: 1.4;
+            font-weight: 400;
+            max-width: 540px;
+            img {
+                margin-top: 3px;
+            }
+        }
+
+        &_choose-arrow {
+        }
+    }
+
+    &__swiper {
+        min-width: 0;
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 48px;
+    }
+
+    &__wrapper {
+        display: inline-flex;
+        height: 100%;
+    }
+
+    &__slide {
+        height: 600px;
+        transition: 0.6s ease all;
+        width: 170px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.3s ease all;
+        }
+        &.swiper-slide-active {
+            img {
+            }
+            width: 426px !important;
+        }
+    }
+
+    &__choose {
+        max-width: 299px;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 400;
+        &:hover {
+            svg {
+                transform: rotate(45deg);
+            }
+        }
+        svg {
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    &__navigation {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        gap: 84px;
+
+        &_prev {
+        }
+
+        &_prev,
+        &_next {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        &_next {
+        }
+    }
+
+    &__pagination {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .rent {
+        margin: 132px 0px 0px 0px;
+        position: relative;
+        &__container {
+        }
+
+        &__bg-title {
+            position: absolute;
+            top: -180px;
+            right: -150px;
+            white-space: nowrap;
+        }
+
+        &__subtitle {
+        }
+
+        &__columns {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: 24px;
+            gap: 48px;
+        }
+
+        &__content {
+            &_title {
+                color: var(--brown);
+                line-height: 1.2;
+                max-width: 680px;
+            }
+
+            &_list {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                margin: 32px 0px 48px 0px;
+            }
+
+            &_list-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 12px;
+                line-height: 1.4;
+                font-weight: 400;
+                max-width: 540px;
+                font-size: 18px;
+                img {
+                    margin-top: 3px;
+                }
+            }
+
+            &_choose-arrow {
+            }
+        }
+
+        &__swiper {
+            min-width: 0;
+            overflow: inherit;
+            position: relative;
+            padding-bottom: 48px;
+        }
+
+        &__wrapper {
+            display: inline-flex;
+            height: 100%;
+        }
+
+        &__slide {
+            height: 343px;
+            transition: 0.6s ease all;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            &.swiper-slide-active {
+                width: 252px !important;
+            }
+        }
+
+        &__choose {
+            max-width: 299px;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 400;
+            &:hover {
+                svg {
+                    transform: rotate(45deg);
+                }
+            }
+            svg {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        &__navigation {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            gap: 84px;
+
+            &_prev {
+            }
+
+            &_prev,
+            &_next {
+                cursor: pointer;
+                user-select: none;
+            }
+
+            &_next {
+            }
+        }
+
+        &__pagination {
+            font-size: 20px;
+        }
+    }
+}

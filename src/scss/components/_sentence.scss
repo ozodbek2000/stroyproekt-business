@@ -1,0 +1,37 @@
+.sentence {
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 712px;
+
+    }
+    &__title {
+        max-width: 1081px;
+        font-size: 48px;
+        font-weight: 500;
+        text-align: center;
+        opacity: 0;
+        color: rgba(114, 88, 79, 0.03);
+        line-height: 1.2;
+    }
+}
+@media (max-width: 767px) {
+    .sentence {
+        &__container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 412px;
+    
+        }
+        &__title {
+            max-width: inherit;
+            font-size: 32px;
+            font-weight: 500;
+            text-align: center;
+            opacity: 0;
+            color: rgba(114, 88, 79, 0.03);
+        }
+    }
+}

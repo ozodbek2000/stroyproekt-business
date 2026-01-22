@@ -1,0 +1,118 @@
+.service {
+    margin: 200px 0px 0px 0px;
+    position: relative;
+
+    &__bg-undertitle {
+        position: absolute;
+        top: -250px;
+        left: 0;
+        bottom: inherit;
+    }
+
+    &__container {
+    }
+
+    &__subtitle {
+    }
+
+    &__columns {
+        display: flex;
+        margin-top: 26px;
+    }
+
+    &__content {
+        flex: 0 1 42%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &_title {
+            max-width: 540px;
+        }
+
+        &_golden {
+            max-width: 537px;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 120%;
+            background: linear-gradient(94.18deg, #9f823c 0%, #d8b86f 62.68%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+    }
+
+    &__image {
+        flex: 1 1 auto;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .service {
+        margin: 169px 0px 0px 0px;
+        position: relative;
+
+        &__bg-undertitle {
+            position: absolute;
+            top: -180px;
+            left: 0;
+            bottom: inherit;
+        }
+
+        &__container {
+        }
+
+        &__subtitle {
+        }
+
+        &__columns {
+            display: flex;
+            flex-direction: column;
+            margin-top: 24px;
+        }
+
+        &__content {
+            flex: 0 1 42%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &_title {
+                max-width: 100%;
+                margin-bottom: 32px;
+            }
+
+            &_img {
+                margin: 0px -15px 24px -15px;
+                img {
+                    width: 100%;
+                }
+            }
+
+            &_golden {
+                max-width: 537px;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 120%;
+                background: linear-gradient(
+                    94.18deg,
+                    #9f823c 0%,
+                    #d8b86f 62.68%
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
+
+        &__image {
+            flex: 1 1 auto;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

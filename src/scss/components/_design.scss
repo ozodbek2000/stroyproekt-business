@@ -1,9 +1,15 @@
 .design {
     position: relative;
     margin: 200px 0px 0px 0px;
+    padding-bottom: 128px;
     background: linear-gradient(180deg, #ffffff 0%, #f5f2ef 27.41%);
 
     &__container {
+    }
+
+    &__bg-undertitle {
+        bottom: 100px;
+        left: 0;
     }
 
     &__bg-title {
@@ -72,8 +78,11 @@
                 line-height: 1.4;
                 li {
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start;
                     gap: 12px;
+                    img {
+                        margin-top: 6px;
+                    }
                 }
             }
         }
@@ -118,7 +127,7 @@
         &__advantage {
             &_item {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: minmax(0, 7%) minmax(0, 93%);
                 gap: 24px;
                 padding-bottom: 32px;
                 border-bottom: 1px solid rgba($color: #7a5e48, $alpha: 0.2);
@@ -139,7 +148,6 @@
                 line-height: 1.2;
                 color: var(--brown);
                 max-width: 341px;
-                margin-left: -170px;
                 margin-top: -10px;
             }
 
@@ -163,7 +171,6 @@
                     line-height: 1.4;
                     li {
                         display: flex;
-                        align-items: center;
                         gap: 12px;
                     }
                 }

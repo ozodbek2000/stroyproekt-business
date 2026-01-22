@@ -1,0 +1,106 @@
+.target {
+    background-image: url(../img/jpg/target-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 956px;
+    color: var(--white);
+    padding: 78px 0px 0px 0px;
+
+    &__container {
+    }
+
+    &__subtitle {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 16px;
+        font-weight: 350;
+    }
+
+    &__columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 31px;
+    }
+
+    &__content {
+        &_title {
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__item {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(15px);
+        border-radius: 2px;
+        border: 1px solid rgba($color: #fff, $alpha: 0.5);
+        height: 96px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0px 32px;
+        max-width: 550px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .target {
+        background-image: url(../img/jpg/target-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 800px;
+        color: var(--white);
+        padding: 66px 0px 0px 0px;
+    
+        &__container {
+        }
+    
+        &__subtitle {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 16px;
+            font-weight: 350;
+        }
+    
+        &__columns {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: 24px;
+            gap: 72px;
+        }
+    
+        &__content {
+            &_title {
+            }
+        }
+    
+        &__items {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+    
+        &__item {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            border-radius: 2px;
+            border: 1px solid rgba($color: #fff, $alpha: 0.5);
+            height: 96px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0px 32px;
+            max-width: 550px;
+            font-size: 24px;
+        }
+    }
+}
