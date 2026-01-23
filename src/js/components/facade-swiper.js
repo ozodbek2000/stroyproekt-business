@@ -5,7 +5,7 @@ const facadeSwiper = () => {
     $(document).ready(function () {
         let isFirstSwipe = true;
 
-        const swiper = new Swiper(".facade__swiper", {
+        const swiper = new Swiper(".facade__swiper, .gallery__swiper", {
             slidesPerView: 1.2,
             spaceBetween: 20,
             loop: true,
@@ -32,6 +32,11 @@ const facadeSwiper = () => {
             },
             on: {
                 slideChange: function () {
+                    // Проверяем ширину экрана
+                    if (window.innerWidth <= 768) {
+                        return;
+                    }
+
                     // Пропускаем первый свайп
                     if (isFirstSwipe) {
                         isFirstSwipe = false;
@@ -93,6 +98,11 @@ const facadeSwiper = () => {
                     }
                 },
                 init: function () {
+                    // Проверяем ширину экрана для init тоже
+                    if (window.innerWidth <= 768) {
+                        return;
+                    }
+
                     const currentIndex = this.activeIndex;
                     const slides = this.slides;
 
@@ -128,13 +138,13 @@ const facadeSwiper = () => {
             },
             breakpoints: {
                 640: {
-                    slidesPerView: '1.2',
+                    slidesPerView: "1.2",
                 },
                 768: {
-                    slidesPerView: '1.4',
+                    slidesPerView: "1.4",
                 },
                 1024: {
-                    slidesPerView: '4.2',
+                    slidesPerView: "4.2",
                 },
             },
         });

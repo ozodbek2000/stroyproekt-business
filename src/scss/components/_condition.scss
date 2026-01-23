@@ -5,6 +5,15 @@
     &__container {
     }
 
+    &__bg-title {
+        top: -250px;
+        right: -150%;
+    }
+
+    &__bg-undertitle {
+        left: -100%;
+    }
+
     &__grid {
         display: grid;
         grid-template-columns: minmax(0, 20.4%) minmax(0, 37.5%) minmax(

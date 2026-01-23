@@ -6,6 +6,8 @@ import facadeSwiper from "./components/facade-swiper";
 import gsapSwipe from "./components/gsap-swipe";
 import toggle from "./components/toggle";
 import gsapText from "./components/gsap-text";
+import gsapAnimate from "./components/gsap-animate";
+import designItem from "./components/design-item";
 
 $(document).ready(function () {
     toggle();
@@ -14,5 +16,7 @@ $(document).ready(function () {
     header();
     number();
     animateTitle();
-    gsapText()
+    gsapText();
+    gsapAnimate();
+    designItem();
 });
