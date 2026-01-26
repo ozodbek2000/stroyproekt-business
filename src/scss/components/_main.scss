@@ -58,7 +58,7 @@
                 span {
                     opacity: 1;
                     visibility: visible;
-                    
+                    letter-spacing: 1.5px;
                 }
                 img {
                     top: 20px;
@@ -86,6 +86,9 @@
                 text-transform: uppercase;
                 position: absolute;
                 bottom: 23px;
+                line-height: 140%;
+                letter-spacing: 10%;
+
 
                 display: flex;
                 text-align: center;

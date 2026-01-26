@@ -6,12 +6,13 @@
     }
 
     &__bg-title {
-        top: -250px;
-        right: -150%;
+        top: -50px;
+        right: -10%;
     }
 
     &__bg-undertitle {
-        left: -100%;
+        left: 0;
+        bottom: -80px;
     }
 
     &__grid {
@@ -70,6 +71,17 @@
         position: relative;
     
         &__container {
+        }
+
+        &__bg-title {
+            top: -45px;
+            left: 20%;
+            right: inherit;
+        }
+
+        &__bg-undertitle {
+            left: 0;
+            bottom: -20px;
         }
     
         &__grid {

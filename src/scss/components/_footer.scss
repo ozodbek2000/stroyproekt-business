@@ -15,6 +15,9 @@
     }
 
     &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
         &_item {
             a {
                 font-size: 14px;
@@ -22,11 +25,12 @@
                 color: rgba($color: #72584f, $alpha: 0.6);
                 text-transform: uppercase;
                 font-weight: 500;
+                transition: 0.3s ease all;
+                &:hover {
+                    color: var(--brown);
+                }
             }
         }
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
     }
 
     &__info {
@@ -151,6 +155,9 @@
         }
 
         &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
             &_item {
                 a {
                     font-size: 14px;
@@ -160,9 +167,6 @@
                     font-weight: 500;
                 }
             }
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
         }
 
         &__info {

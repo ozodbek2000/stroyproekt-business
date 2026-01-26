@@ -35,7 +35,7 @@
                     &::after {
                         content: "";
                         position: absolute;
-                        top: 5px;
+                        top: 9px;
                         left: 0;
                         width: 6px;
                         height: 6px;
@@ -78,7 +78,7 @@
             &::after {
                 content: "";
                 position: absolute;
-                top: 5px;
+                top: 9px;
                 left: 0;
                 width: 6px;
                 height: 6px;
@@ -176,11 +176,13 @@
                 .solution__img {
                     left: inherit;
                     right: 0;
+                    z-index: 1;
                 }
                 .solution__content {
                     max-width: inherit;
                     margin: 0px -15px 0px -15px;
                     padding: 66px 15px 0px 15px;
+                    background-color: #f5f2ef;
                 }
                 .solution__title {
                     color: var(--brown);

@@ -6,6 +6,8 @@ const toggle = () => {
         $(".menu").toggleClass("active");
         $("header").toggleClass("border");
         $("body").toggleClass("lock");
+        $(".popup__box").removeClass("active");
+        $(".overlay").removeClass("active");
 
         if ($(".menu").hasClass("active")) {
             $("header").data("had-bg", $("header").hasClass("bg"));
@@ -19,12 +21,18 @@ const toggle = () => {
     $(".popup__close, .overlay").click(function (event) {
         $(".overlay").removeClass("active");
         $(".popup__box").removeClass("active");
-        $("body").removeClass("lock");
+        $('.menu').removeClass('active');
+        $('header').removeClass('border');
+        if (!$(".menu").hasClass("active")) {
+            $("body").removeClass("lock");
+        }
     });
     $(".choose, .cta__box").click(function (event) {
         $(".overlay").addClass("active");
         $(".popup__box").addClass("active");
-        $("body").toggleClass("lock");
+        $("body").addClass("lock");
+        $('header').addClass('bg');
+        $('.header__burger').removeClass("active");
         if ($(window).width() < 768) {
             $("header").addClass("active");
         }

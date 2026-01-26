@@ -5,7 +5,7 @@
         right: -30%;
         max-width: 618px;
         background-color: var(--white);
-        z-index: 3;
+        z-index: 5;
         height: 100%;
         padding: 50px 68px 50px 48px;
 
@@ -76,13 +76,13 @@
     .popup {
         &__box {
             position: fixed;
-            top: 0;
+            top: 80px;
             right: -30%;
             max-width: 618px;
             background-color: var(--white);
-            z-index: 3;
+            z-index: 4;
             height: 100%;
-            padding: 224px 32px 32px 32px;
+            padding: 150px 32px 32px 32px;
 
             visibility: hidden;
             opacity: 0;
@@ -93,25 +93,21 @@
                 right: 0;
             }
         }
-
         &__close {
             position: fixed;
             top: 128px;
             right: 32px;
             cursor: pointer;
         }
-
         &__title {
             padding: 0px 0px 24px 0px;
         }
-
         &__subtitle {
             font-size: 18px;
             font-weight: 450;
             margin-bottom: 36px;
             line-height: 1.2;
         }
-
         &__forms {
             display: flex;
             flex-direction: column;
@@ -126,7 +122,6 @@
                 }
             }
         }
-
         &__confidential {
             color: var(--black);
             margin: 24px 0px 16px 0px;
@@ -139,10 +134,8 @@
                 }
             }
         }
-
         &__send {
         }
-
         &__overlay {
         }
     }

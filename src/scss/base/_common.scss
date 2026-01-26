@@ -83,7 +83,7 @@
     opacity: 0;
     visibility: hidden;
     transition: 0.3s ease all;
-    z-index: 2;
+    z-index: 3;
 
     &.active {
         visibility: visible;
@@ -133,7 +133,7 @@
 .text {
     font-size: 18px;
     line-height: 1.4;
-    font-weight: 450;
+    font-weight: 300;
 }
 .text-gold {
     font-size: 32px;

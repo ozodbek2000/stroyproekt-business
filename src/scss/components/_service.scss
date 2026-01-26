@@ -13,11 +13,45 @@
     }
 
     &__subtitle {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 24px;
     }
 
     &__columns {
+    }
+
+    &__swiper {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        margin-top: -190px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 697px;
+            height: 537px;
+            background: linear-gradient(
+                177.11deg,
+                #ffffff 59.39%,
+                rgba(255, 255, 255, 0) 97.75%
+            );
+        }
+    }
+
+    &__wrapper {
+        max-height: 640px;
+        
+    }
+
+    &__slide {
         display: flex;
         margin-top: 26px;
+        align-items: flex-end;
+        height: 100% !important;
     }
 
     &__content {
@@ -25,8 +59,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+       
         &_title {
             max-width: 540px;
+            z-index: 2;
+            position: relative;
         }
 
         &_golden {
@@ -74,11 +111,38 @@
             margin-top: 24px;
         }
 
+        &__swiper {
+            height: inherit;
+            width: inherit;
+            overflow: hidden;
+            margin-top: 0px;
+            position: relative;
+            margin: 0px -15px 0px -15px;
+            &::after {
+                display: none;
+            }
+        }
+    
+        &__wrapper {
+            max-height: 340px;
+            
+        }
+    
+        &__slide {
+            display: flex;
+            margin-top: 26px;
+            align-items: flex-end;
+            height: 370px !important;
+            flex-direction: column-reverse;
+            gap: 24px;
+        }
+
         &__content {
-            flex: 0 1 42%;
+            flex: 1 1 inherit;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            width: 100%;
             &_title {
                 max-width: 100%;
                 margin-bottom: 32px;
@@ -92,10 +156,11 @@
             }
 
             &_golden {
-                max-width: 537px;
+                max-width: inherit;
                 font-weight: 500;
                 font-size: 24px;
                 line-height: 120%;
+                padding: 0px 15px;
                 background: linear-gradient(
                     94.18deg,
                     #9f823c 0%,
@@ -105,6 +170,9 @@
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
                 text-fill-color: transparent;
+                br {
+                    display: none;
+                }
             }
         }
 

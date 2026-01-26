@@ -157,7 +157,7 @@
 
 
         <main class="wrapper">
-            <section class="main">
+            <section class="main" id="main">
     <div class="main__container">
         <div class="main__content">
             <div class="main__titlebox">
@@ -223,6 +223,10 @@
 
             <section class="condition">
     <div class="condition__container">
+        <div class="condition__bg-title bg-title">о проекте</div>
+        <div class="condition__bg-undertitle bg-title-bottom">
+            о проекте
+        </div>
         <div class="condition__grid animate-in">
             <div class="condition__img_small">
                 <img src="../img/jpg/condition01.jpg" alt="condition" />
@@ -235,10 +239,8 @@
                 <div class="condition__title title">
                     Лучшие условия для<br />людей и их работы
                 </div>
-                <div class="condition__bg-title bg-title">о проекте</div>
-                <div class="condition__bg-undertitle bg-title-bottom">
-                    о проекте
-                </div>
+                
+                
                 <div class="condition__text text">
                     <p>
                         St. Peterburg Business Center — это новый символ
@@ -681,8 +683,8 @@
                         Система умного доступа и безопасности
                     </div>
                     <ul class="solution__list">
-                        <li>Доступ по биометрии и QR-коду</li>
-                        <li>24/7 охрана и видеонаблюдение (CCTV)</li>
+                        <li class="text">Доступ по биометрии и QR-коду</li>
+                        <li class="text">24/7 охрана и видеонаблюдение (CCTV)</li>
                     </ul>
                 </div>
             </div>
@@ -699,8 +701,8 @@
                         Комфортный микроклимат круглый год
                     </div>
                     <ul class="solution__list">
-                        <li>Кондиционирование: система LG VRF</li>
-                        <li>
+                        <li class="text">Кондиционирование: система LG VRF</li>
+                        <li class="text">
                             Вентиляция: AVENTOS AHU, трёхступенчатая фильтрация
                             последнего поколения
                         </li>
@@ -720,8 +722,8 @@
                         Бесперебойное электроснабжение
                     </div>
                     <ul class="solution__list">
-                        <li>UPS</li>
-                        <li>Генераторы</li>
+                        <li class="text">UPS</li>
+                        <li class="text">Генераторы</li>
                     </ul>
                 </div>
             </div>
@@ -738,8 +740,8 @@
                         Доступ к интернету 24/7
                     </div>
                     <ul class="solution__list">
-                        <li>Высокоскоростной оптоволоконный интернет</li>
-                        <li>
+                        <li class="text">Высокоскоростной оптоволоконный интернет</li>
+                        <li class="text">
                             Кибербезопасность и серверные помещения для аренды
                         </li>
                     </ul>
@@ -755,7 +757,7 @@
                 />
                 <div class="solution__content">
                     <div class="solution__title title">Интеллектуальная система управления зданием (BMS)</div>
-                    <div class="solution__text">
+                    <div class="solution__text text">
                         Интегрирует системы отопления, вентиляции, освещения,
                         безопасности, управления энергией и другие ключевые
                         системы для оптимизации производительности и
@@ -807,10 +809,10 @@
                         Сервисная команда на объекте
                     </div>
                     <ul class="solution__list">
-                        <li>Клининг</li>
-                        <li>Решение мелких бытовых вопросов</li>
-                        <li>Системный администратор</li>
-                        <li>Дополнительные сервисные услуги</li>
+                        <li class="text">Клининг</li>
+                        <li class="text">Решение мелких бытовых вопросов</li>
+                        <li class="text">Системный администратор</li>
+                        <li class="text">Дополнительные сервисные услуги</li>
                     </ul>
                 </div>
             </div>
@@ -1000,20 +1002,76 @@
             <img src="../img/svg/star.svg" alt="star" />
             <span>Услуги</span>
         </div>
-        <div class="service__columns animate-in">
-            <div class="service__content animate-in">
-                <div class="service__content_title title">
-                    Локации на территории бизнес-центра
+        <div class="service__content_title title">
+            Локации<br>на территории бизнес-центра
+        </div>
+        <div class="service__swiper swiper-container">
+            <div class="service__wrapper swiper-wrapper">
+                <div class="service__slide swiper-slide">
+                    <div class="service__content">
+                        <!-- <div class="service__content_img mobile-only">
+                            <img src="../img/jpg/service01.jpg" alt="service" />
+                        </div> -->
+                        <div class="service__content_golden">
+                            Ресепшн и лобби-зона<br />Премиум-класса
+                        </div>
+                    </div>
+                    <div class="service__image">
+                        <img src="../img/jpg/service01.jpg" alt="service" />
+                    </div>
                 </div>
-                <div class="service__content_img mobile-only">
-                    <img src="../img/jpg/service.jpg" alt="service">
+                <div class="service__slide swiper-slide">
+                    <div class="service__content">
+                        <!-- <div class="service__content_img mobile-only">
+                            <img src="../img/jpg/service02.jpg" alt="service" />
+                        </div> -->
+                        <div class="service__content_golden">
+                            Кафе и лаунж-пространства
+                        </div>
+                    </div>
+                    <div class="service__image">
+                        <img src="../img/jpg/service02.jpg" alt="service" />
+                    </div>
                 </div>
-                <div class="service__content_golden">
-                    Ресепшн и лобби-зона<br />Премиум-класса
+                <div class="service__slide swiper-slide">
+                    <div class="service__content">
+                        <!-- <div class="service__content_img mobile-only">
+                            <img src="../img/jpg/service03.jpg" alt="service" />
+                        </div> -->
+                        <div class="service__content_golden">
+                            Конференц-залы <br>и переговорные
+                        </div>
+                    </div>
+                    <div class="service__image">
+                        <img src="../img/jpg/service03.jpg" alt="service" />
+                    </div>
                 </div>
-            </div>
-            <div class="service__image desktop-only">
-                <img src="../img/jpg/service.jpg" alt="service" />
+                <div class="service__slide swiper-slide">
+                    <div class="service__content">
+                        <!-- <div class="service__content_img mobile-only">
+                            <img src="../img/jpg/service04.jpg" alt="service" />
+                        </div> -->
+                        <div class="service__content_golden">
+                            Терраса для мероприятий
+                        </div>
+                    </div>
+                    <div class="service__image">
+                        <img src="../img/jpg/service04.jpg" alt="service" />
+                    </div>
+                </div>
+                <div class="service__slide swiper-slide">
+                    <div class="service__content">
+                        <!-- <div class="service__content_img mobile-only">
+                            <img src="../img/jpg/service05.jpg" alt="service" />
+                        </div> -->
+                        <div class="service__content_golden">
+                            Зона для съёмок <br>и презентаций
+                        </div>
+                    </div>
+                    <div class="service__image">
+                        <img src="../img/jpg/service05.jpg" alt="service" />
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1170,7 +1228,7 @@
             <div class="footer__info">
                 <a class="footer__info_logo" href="##"><img src="../img/svg/footer-logo.svg" alt="logo"></a>
                 <a href="tel:+998000000000" class="footer__info_number">+998 00 000 00 00</a>
-                <a href="##" class="footer__info_up">
+                <a href="#main" class="footer__info_up">
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 16L13.2929 10.7071C13.6834 10.3166 14.3166 10.3166 14.7071 10.7071L20 16" stroke="#72584F" stroke-opacity="0.18" stroke-width="2" stroke-linecap="round"/>
                     </svg>
