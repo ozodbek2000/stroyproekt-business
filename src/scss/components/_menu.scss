@@ -3,7 +3,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 37vw;
     height: 100vh;
     background-color: var(--green);
     opacity: 0;
@@ -36,7 +36,8 @@
         display: flex;
         align-items: center;
         height: 100%;
-        max-width: 550px;
+        max-width: 450px;
+        margin-left: 120px;
     }
 
     &__list {

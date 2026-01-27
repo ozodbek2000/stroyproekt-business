@@ -1,12 +1,32 @@
 .main {
-    background-image: url(../img/jpg/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
     margin: 10px 20px 0px 20px;
     color: var(--white);
     display: flex;
     align-items: center;
     height: 910px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        z-index: -1;
+    }
+
+    & > video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: -2;
+    }
 
     &__container {
         flex: 1 1 auto;
@@ -109,10 +129,6 @@
 
 @media (max-width: 767px) {
     .main {
-        background-image: url(../img/jpg/bg.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 13%;
         margin: 16px 16px 0px 16px;
         color: var(--white);
         display: flex;

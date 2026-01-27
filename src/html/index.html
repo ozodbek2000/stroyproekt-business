@@ -10,26 +10,27 @@
     </head>
     <body>
         @@include('../components/header.html')
-
-        <main class="wrapper">
-            @@include('../components/main.html')
-            @@include('../components/condition.html')
-            @@include('../components/comfort.html')
-            @@include('../components/facade.html')
-            @@include('../components/design.html')
-            @@include('../components/solution.html')
-            @@include('../components/sentence.html')
-            @@include('../components/target.html')
-            @@include('../components/rent.html')
-            @@include('../components/service.html')
-            @@include('../components/gallery.html')
-            @@include('../components/contacts.html')
-            @@include('../components/footer.html')
-        </main>
-
-        <!-- @@include('../components/footer.html') -->
         @@include('../components/menu.html')
         @@include('../components/popup.html')
+        <div id="scrollsmoother-wrapper">
+            <div id="scrollsmoother-container">
+                <main class="wrapper">
+                    @@include('../components/main.html')
+                    @@include('../components/condition.html')
+                    @@include('../components/comfort.html')
+                    @@include('../components/facade.html')
+                    @@include('../components/design.html')
+                    @@include('../components/solution.html')
+                    @@include('../components/sentence.html')
+                    @@include('../components/target.html')
+                    @@include('../components/rent.html')
+                    @@include('../components/service.html')
+                    @@include('../components/gallery.html')
+                    @@include('../components/contacts.html')
+                </main>
+                @@include('../components/footer.html')
+            </div>
+        </div>
 
         <script src="js/index.js"></script>
     </body>

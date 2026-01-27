@@ -45,7 +45,7 @@ function html() {
         .pipe(
             fileInclude({
                 prefix: "@@",
-                basepath: "@file", // важно!
+                basepath: "@file",
             })
         )
         .pipe(dest("dist"))
@@ -55,6 +55,12 @@ function html() {
 async function images() {
     return src("src/img/**/*.{jpg,jpeg,png,svg,gif}")
         .pipe(dest("dist/img"))
+        .pipe(browserSync.stream());
+}
+
+async function video() {
+    return src("src/video/**/*.{mp4,webm,mov,avi}")
+        .pipe(dest("dist/video"))
         .pipe(browserSync.stream());
 }
 
@@ -78,20 +84,20 @@ function serve() {
     watch("src/scss/**/*.scss", styles);
     watch("src/**/*.html", html);
     watch("src/fonts/**/*", fonts);
-    watch("src/img/**/*", series(images));
+    watch("src/img/**/*", images);
+    watch("src/video/**/*", video); 
     watch("src/js/**/*.js", scripts);
 }
 
 const build = series(
     clean,
-    parallel(styles, scripts, html, fonts, images)
-  );
-  
-  const dev = series(
+    parallel(styles, scripts, html, fonts, images, video)
+);
+
+const dev = series(
     build,
     serve
-  );
-  
-  exports.build = build;
-  exports.default = dev;
-  
+);
+
+exports.build = build;
+exports.default = dev;

@@ -7,7 +7,7 @@ const toggle = () => {
         $("header").toggleClass("border");
         $("body").toggleClass("lock");
         $(".popup__box").removeClass("active");
-        $(".overlay").removeClass("active");
+        $(".overlay").toggleClass("active green");
 
         if ($(".menu").hasClass("active")) {
             $("header").data("had-bg", $("header").hasClass("bg"));
@@ -21,18 +21,28 @@ const toggle = () => {
     $(".popup__close, .overlay").click(function (event) {
         $(".overlay").removeClass("active");
         $(".popup__box").removeClass("active");
-        $('.menu').removeClass('active');
-        $('header').removeClass('border');
+        $(".menu").removeClass("active");
+        $("header").removeClass("border");
+        $(".header__burger").removeClass("active");
+        
+        if ($('.overlay').hasClass('green')) {
+            $('.overlay').removeClass('green');
+        }
+        if ($('.overlay').hasClass('black')) {
+            $('.overlay').removeClass('black');
+        }
+
         if (!$(".menu").hasClass("active")) {
             $("body").removeClass("lock");
         }
     });
     $(".choose, .cta__box").click(function (event) {
-        $(".overlay").addClass("active");
+        $(".overlay").addClass("active black");
         $(".popup__box").addClass("active");
         $("body").addClass("lock");
-        $('header').addClass('bg');
-        $('.header__burger').removeClass("active");
+        $("header").addClass("bg");
+        $(".header__burger").removeClass("active");
+        $(".menu").removeClass("active");
         if ($(window).width() < 768) {
             $("header").addClass("active");
         }

@@ -155,9 +155,87 @@
     </div>
 </header>
 
+        <section class="menu">
+    <div class="menu__container">
+        <nav class="menu__nav">
+            <ul class="menu__list">
+                <li class="menu__list_item">
+                    <a href="##">о нас</a>
+                </li>
+                <li class="menu__list_item">
+                    <a href="##">услуги</a>
+                </li>
+                <li class="menu__list_item">
+                    <a href="##">новости</a>
+                </li>
+                <li class="menu__list_item">
+                    <a href="##">обратная связь</a>
+                </li>
+                <li class="menu__list_item">
+                    <a href="##">контакты</a>
+                </li>
+                <li class="menu__list_choose">
+                    <a href="##" class="choose golden">
+                        <span>ВЫБРАТЬ ПОМЕЩЕНИЕ</span>
+                        <div></div>
+                        <svg
+                            width="16"
+                            height="16" 
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M9 7V0H7V7H0V9H7V16H9V9H16V7H9Z" fill="white" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+        <section class="popup">
+    <div class="popup__box">
+        <img class="popup__close" src="../img/svg/close.svg" alt="close" />
+        <div class="popup__title title">Оставить заявку</div>
+        <div class="popup__subtitle">
+            Хотите узнать подробнее?<br />Оставьте Ваши контакты и мы перезвоним
+            Вам
+        </div>
+        <div class="popup__forms">
+            <input type="text" placeholder="Имя" />
+            <input type="tel" placeholder="Телефон" />
+        </div>
+        <div class="popup__confidential">
+            Нажимая на кнопку “Отправить”, вы соглашаетесь с
+            <a href="##">Политикой конфиденциальности</a>
+        </div>
+        <a href="##" class="popup__send button">
+            <span>отправить заявку</span>
+            <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M11 21L21 11M21 11H11M21 11V21"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"
+                />
+            </svg>
+        </a>
+    </div>
+    <div class="popup__overlay overlay"></div>
+</section>
 
-        <main class="wrapper">
-            <section class="main" id="main">
+        <div id="scrollsmoother-wrapper">
+            <div id="scrollsmoother-container">
+                <main class="wrapper">
+                    <section class="main" id="main">
+    <video src="../video/intro.mp4" preload="auto" loop muted autoplay></video>
     <div class="main__container">
         <div class="main__content">
             <div class="main__titlebox">
@@ -221,7 +299,7 @@
     </div>
 </section>
 
-            <section class="condition">
+                    <section class="condition">
     <div class="condition__container">
         <div class="condition__bg-title bg-title">о проекте</div>
         <div class="condition__bg-undertitle bg-title-bottom">
@@ -282,7 +360,7 @@
     </div>
 </section>
 
-            <section class="comfort">
+                    <section class="comfort">
     <div class="comfort__container">
         <div class="comfort__subtitle subtitle animate-in">
             <img src="../img/svg/star.svg" alt="star" />
@@ -316,7 +394,7 @@
     </div>
 </section>
 
-            <section class="facade animate-in">
+                    <section class="facade animate-in">
     <div class="facade__container">
         <div class="facade__content animate-in">
             <div class="facade__title title">
@@ -419,7 +497,7 @@
     </div>
 </section>
 
-            <section class="design">
+                    <section class="design">
     <div class="design__container">
         <div class="design__bg-title bg-title">архитектура и технологии</div>
         <div class="design__subtitle subtitle animate-in">
@@ -593,16 +671,16 @@
     <div class="design__bg-undertitle bg-title-bottom">Параметры</div>
 </section>
 
-            <section class="solution">
+                    <section class="solution">
     <div class="solution__slider ">
         <div class="solution__slide">
-            <div class="solution__container animate-in">
+            <div class="solution__container ">
                 <img
                     class="solution__img"
                     src="../img/jpg/solution01.jpg"
                     alt="solution"
                 />
-                <div class="solution__content">
+                <div class="solution__content animate-in">
                     <div class="solution__subtitle subtitle">
                         <img src="../img/svg/star.svg" alt="star" />
                         <span>Параметры</span>
@@ -820,53 +898,70 @@
     </div>
 </section>
 
-            <section class="sentence">
+                    <section class="sentence">
     <div class="sentence__container">
         <h3 class="sentence__title">
             Это не просто офис — <br class="mobile-only"> это экосистема для <br> здоровой и <br class="mobile-only"> продуктивной работы
         </h3>
     </div>
 </section>
-            <section class="target">
-    <div class="target__container">
-        <div class="target__subtitle subtitle-white animate-in">
-            <svg
-                width="18"
-                height="20"
-                viewBox="0 0 18 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                    d="M18 9.77143C10.0559 10.4047 9.58315 10.9177 9.00015 19.5429C8.41686 10.918 7.94439 10.4047 0 9.77143C7.94411 9.13816 8.41686 8.6252 9.00015 0C9.58315 8.6252 10.0559 9.13847 18 9.77143Z"
-                    fill="white"
-                />
-            </svg>
-            Целевая аудитория
-        </div>  
-        <div class="target__columns animate-in">
-            <div class="target__content">
-                <div class="target__content_title title">Для кого этот центр</div>
-            </div>
-            <div class="target__items">
-                <div class="target__item">
-                    <img src="../img/svg/golden-plus.svg" alt="golden-plus">
-                    <span>IT-компании</span>
+                    <section class="target">
+    <div class="pin-spacer-wrapper">
+        <div class="target__animation-container">
+            <div class="target__expanded-bg"></div>
+
+            <div class="target__container">
+                <div class="target__subtitle subtitle-white animate-in">
+                    <svg
+                        width="18"
+                        height="20"
+                        viewBox="0 0 18 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M18 9.77143C10.0559 10.4047 9.58315 10.9177 9.00015 19.5429C8.41686 10.918 7.94439 10.4047 0 9.77143C7.94411 9.13816 8.41686 8.6252 9.00015 0C9.58315 8.6252 10.0559 9.13847 18 9.77143Z"
+                            fill="white"
+                        />
+                    </svg>
+                    Целевая аудитория
                 </div>
-                <div class="target__item">
-                    <img src="../img/svg/golden-plus.svg" alt="golden-plus">
-                    <span>Консалтинговые агентства</span>
-                </div>
-                <div class="target__item">
-                    <img src="../img/svg/golden-plus.svg" alt="golden-plus">
-                    <span>Международные представительства</span>
+                <div class="target__columns animate-in">
+                    <div class="target__content">
+                        <div class="target__content_title title">
+                            Для кого этот центр
+                        </div>
+                    </div>
+                    <div class="target__items">
+                        <div class="target__item">
+                            <img
+                                src="../img/svg/golden-plus.svg"
+                                alt="golden-plus"
+                            />
+                            <span>IT-компании</span>
+                        </div>
+                        <div class="target__item">
+                            <img
+                                src="../img/svg/golden-plus.svg"
+                                alt="golden-plus"
+                            />
+                            <span>Консалтинговые агентства</span>
+                        </div>
+                        <div class="target__item">
+                            <img
+                                src="../img/svg/golden-plus.svg"
+                                alt="golden-plus"
+                            />
+                            <span>Международные представительства</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-            <section class="rent">
+                    <section class="rent">
     <div class="rent__bg-title bg-title">условия аренды</div>
     <div class="rent__container">
         <div class="rent__subtitle subtitle animate-in">
@@ -995,7 +1090,7 @@
     </div>
 </section>
 
-            <section class="service">
+                    <section class="service">
     <div class="service__bg-undertitle bg-title-bottom">Услуги</div>
     <div class="service__container">
         <div class="service__subtitle subtitle animate-in">
@@ -1077,7 +1172,7 @@
     </div>
 </section>
 
-            <section class="gallery">
+                    <section class="gallery">
     <div class="gallery__bg-title bg-title">Галерея</div>
     <div class="facade__container">
         <div class="facade__content gallery__content animate-in">
@@ -1101,13 +1196,13 @@
                     <img src="../img/jpg/gallery03.jpg" alt="facade" />
                 </div>
                 <div class="gallery__slide swiper-slide">
-                    <img src="../img/jpg/gallery01.jpg" alt="facade" />
+                    <img src="../img/jpg/facade01.jpg" alt="facade" />
                 </div>
                 <div class="gallery__slide swiper-slide">
                     <img src="../img/jpg/gallery02.jpg" alt="facade" />
                 </div>
                 <div class="gallery__slide swiper-slide">
-                    <img src="../img/jpg/gallery03.jpg" alt="facade" />
+                    <img src="../img/jpg/facade03.jpg" alt="facade" />
                 </div>
             </div>
             <div class="facade__navigation">
@@ -1149,7 +1244,7 @@
     </div>
 </section>
 
-            <section class="contacts">
+                    <section class="contacts">
     <div class="contacts__bg-undertitle bg-title-bottom">Контакты</div>
     <div class="contacts__container">
         <div class="contacts__subtitle subtitle">
@@ -1213,7 +1308,8 @@
     </div>
 </section>
 
-            <footer class="footer">
+                </main>
+                <footer class="footer">
     <div class="footer__container animate-in">
         <div class="footer__columns animate-in">
             <nav class="footer__navbar">
@@ -1258,88 +1354,8 @@
         </div>
     </div>
 </footer>
-        </main>
-
-        
-        <section class="menu">
-    <div class="menu__container">
-        <nav class="menu__nav">
-            <ul class="menu__list">
-                <li class="menu__list_item">
-                    <a href="##">о нас</a>
-                </li>
-                <li class="menu__list_item">
-                    <a href="##">услуги</a>
-                </li>
-                <li class="menu__list_item">
-                    <a href="##">новости</a>
-                </li>
-                <li class="menu__list_item">
-                    <a href="##">обратная связь</a>
-                </li>
-                <li class="menu__list_item">
-                    <a href="##">контакты</a>
-                </li>
-                <li class="menu__list_choose">
-                    <a href="##" class="choose golden">
-                        <span>ВЫБРАТЬ ПОМЕЩЕНИЕ</span>
-                        <div></div>
-                        <svg
-                            width="16"
-                            height="16" 
-                            viewBox="0 0 16 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path d="M9 7V0H7V7H0V9H7V16H9V9H16V7H9Z" fill="white" />
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-            <div class="menu__img">
-                <img src="../img/jpg/menu-bg.jpg" alt="building">
             </div>
-        </nav>
-    </div>
-</section>
-        <section class="popup">
-    <div class="popup__box">
-        <img class="popup__close" src="../img/svg/close.svg" alt="close" />
-        <div class="popup__title title">Оставить заявку</div>
-        <div class="popup__subtitle">
-            Хотите узнать подробнее?<br />Оставьте Ваши контакты и мы перезвоним
-            Вам
         </div>
-        <div class="popup__forms">
-            <input type="text" placeholder="Имя" />
-            <input type="tel" placeholder="Телефон" />
-        </div>
-        <div class="popup__confidential">
-            Нажимая на кнопку “Отправить”, вы соглашаетесь с
-            <a href="##">Политикой конфиденциальности</a>
-        </div>
-        <a href="##" class="popup__send button">
-            <span>отправить заявку</span>
-            <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                    d="M11 21L21 11M21 11H11M21 11V21"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="square"
-                    stroke-linejoin="round"
-                />
-            </svg>
-        </a>
-    </div>
-    <div class="popup__overlay overlay"></div>
-</section>
-
 
         <script src="js/index.js"></script>
     </body>

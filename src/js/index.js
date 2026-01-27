@@ -8,6 +8,8 @@ import toggle from "./components/toggle";
 import gsapText from "./components/gsap-text";
 import gsapAnimate from "./components/gsap-animate";
 import designItem from "./components/design-item";
+import scroll from "./components/scroll";
+import targetBg from "./components/target-bg";
 
 $(document).ready(function () {
     toggle();
@@ -19,4 +21,6 @@ $(document).ready(function () {
     gsapText();
     gsapAnimate();
     designItem();
+    scroll();
+    targetBg();
 });
