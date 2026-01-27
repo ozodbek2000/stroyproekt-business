@@ -153,6 +153,11 @@ const facadeSwiper = () => {
             slidesPerView: "auto",
             direction: "vertical",
             mousewheel: false,
+            speed: 600, // Smooth transition speed
+            effect: "slide", // Can also try "fade" or "creative"
+            allowTouchMove: true,
+            resistance: true,
+            resistanceRatio: 0.85,
             breakpoints: {
                 767: {
                     slidesPerView: "1",
@@ -160,18 +165,21 @@ const facadeSwiper = () => {
                 },
             },
         });
-        
+
         const $serviceSection = $(".service__swiper");
         let lastScrollTime = 0;
-        const scrollDelay = 400;
-        let swiperDisabled = false; // Флаг для отключения свайпера
+        const scrollDelay = 150; // Reduced for quicker response
+        let swiperDisabled = false;
         let touchStartY = 0;
-        
+        let isAnimating = false;
+        let accumulatedDelta = 0;
+        const deltaThreshold = 40; // Sensitive but not too jumpy
+
         // Проверяем, мобильное ли устройство
         function isMobile() {
             return window.innerWidth < 767;
         }
-        
+
         // Проверяем, находится ли курсор над секцией
         function isMouseOverService(e) {
             const rect = $serviceSection[0].getBoundingClientRect();
@@ -182,7 +190,7 @@ const facadeSwiper = () => {
                 e.clientX <= rect.right
             );
         }
-        
+
         // Проверяем, находится ли тач над секцией
         function isTouchOverService(touch) {
             const rect = $serviceSection[0].getBoundingClientRect();
@@ -193,148 +201,220 @@ const facadeSwiper = () => {
                 touch.clientX <= rect.right
             );
         }
-        
-        // Проверяем, полностью ли секция покрыта экраном (видна целиком)
+
+        // Проверяем, полностью ли секция покрыта экраном
         function isSectionFullyCovered() {
             const rect = $serviceSection[0].getBoundingClientRect();
             const windowHeight = $(window).height();
-        
             return rect.top >= 0 && rect.bottom <= windowHeight;
         }
-        
+
+        // Debounce helper
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Reset accumulated delta after pause
+        const resetAccumulatedDelta = debounce(() => {
+            accumulatedDelta = 0;
+        }, 200);
+
+        // Easing function for smooth momentum
+        function easeOutCubic(t) {
+            return 1 - Math.pow(1 - t, 3);
+        }
+
         // Обработка скролла мышью (для десктопа)
         document.addEventListener(
             "wheel",
             function (e) {
-                const scrollingDown = e.deltaY > 0;
-                const scrollingUp = e.deltaY < 0;
-        
-                // Проверяем позицию курсора и полное покрытие секции экраном
                 if (!isMouseOverService(e) || !isSectionFullyCovered()) {
-                    return; // Работает обычный скролл страницы
+                    accumulatedDelta = 0;
+                    return;
                 }
-        
+
+                if (isAnimating) {
+                    e.preventDefault();
+                    return;
+                }
+
                 const currentTime = Date.now();
-        
+
+                // Accumulate with momentum consideration
+                const momentum = Math.min(Math.abs(e.deltaY) / 100, 1);
+                accumulatedDelta += e.deltaY * (0.5 + momentum * 0.5);
+                resetAccumulatedDelta();
+
+                const scrollingDown = accumulatedDelta > deltaThreshold;
+                const scrollingUp = accumulatedDelta < -deltaThreshold;
+
                 // Скроллим вниз
                 if (scrollingDown) {
                     if (serviceSwiper.isEnd) {
+                        accumulatedDelta = 0;
                         return;
-                    } else {
-                        if (currentTime - lastScrollTime < scrollDelay) {
-                            e.preventDefault();
-                            return;
-                        }
-        
-                        e.preventDefault();
-                        lastScrollTime = currentTime;
-                        serviceSwiper.slideNext();
                     }
+
+                    if (currentTime - lastScrollTime < scrollDelay) {
+                        e.preventDefault();
+                        return;
+                    }
+
+                    e.preventDefault();
+                    isAnimating = true;
+                    lastScrollTime = currentTime;
+                    accumulatedDelta = 0;
+
+                    serviceSwiper.slideNext();
+
+                    setTimeout(() => {
+                        isAnimating = false;
+                    }, 600);
                 }
-        
+
                 // Скроллим вверх
                 if (scrollingUp) {
                     if (serviceSwiper.isBeginning) {
+                        accumulatedDelta = 0;
                         return;
-                    } else {
-                        if (currentTime - lastScrollTime < scrollDelay) {
-                            e.preventDefault();
-                            return;
-                        }
-        
-                        e.preventDefault();
-                        lastScrollTime = currentTime;
-                        serviceSwiper.slidePrev();
                     }
+
+                    if (currentTime - lastScrollTime < scrollDelay) {
+                        e.preventDefault();
+                        return;
+                    }
+
+                    e.preventDefault();
+                    isAnimating = true;
+                    lastScrollTime = currentTime;
+                    accumulatedDelta = 0;
+
+                    serviceSwiper.slidePrev();
+
+                    setTimeout(() => {
+                        isAnimating = false;
+                    }, 600);
+                }
+
+                // Prevent default for any movement in section
+                if (Math.abs(accumulatedDelta) > 0) {
+                    e.preventDefault();
                 }
             },
             { passive: false }
         );
-        
+
         // Обработка тач-событий для мобильных устройств
+        let lastTouchTime = 0;
+        const touchDelay = 100;
+
         document.addEventListener(
             "touchstart",
             function (e) {
                 if (!isMobile()) return;
-                
                 touchStartY = e.touches[0].clientY;
+                isAnimating = false;
             },
             { passive: true }
         );
-        
+
         document.addEventListener(
             "touchmove",
             function (e) {
                 if (!isMobile()) return;
-                
-                // Если свайпер отключен на мобильном, работает обычный скролл
+
                 if (swiperDisabled) {
                     return;
                 }
-        
+
                 const touch = e.touches[0];
-                
-                // Проверяем позицию тача и полное покрытие секции экраном
+
                 if (!isTouchOverService(touch) || !isSectionFullyCovered()) {
-                    return; // Работает обычный скролл страницы
-                }
-        
-                const touchEndY = touch.clientY;
-                const touchDiff = touchStartY - touchEndY;
-                const scrollingDown = touchDiff > 0;
-                const scrollingUp = touchDiff < 0;
-        
-                const currentTime = Date.now();
-        
-                // Минимальное расстояние для регистрации свайпа
-                if (Math.abs(touchDiff) < 10) {
                     return;
                 }
-        
+
+                if (isAnimating) {
+                    e.preventDefault();
+                    return;
+                }
+
+                const touchEndY = touch.clientY;
+                const touchDiff = touchStartY - touchEndY;
+                const scrollingDown = touchDiff > 50;
+                const scrollingUp = touchDiff < -50;
+
+                const currentTime = Date.now();
+
                 // Скроллим вниз
                 if (scrollingDown) {
                     if (serviceSwiper.isEnd) {
-                        // На последнем слайде на мобильном - отключаем свайпер навсегда
                         swiperDisabled = true;
                         return;
-                    } else {
-                        if (currentTime - lastScrollTime < scrollDelay) {
-                            e.preventDefault();
-                            return;
-                        }
-        
-                        e.preventDefault();
-                        lastScrollTime = currentTime;
-                        serviceSwiper.slideNext();
-                        touchStartY = touchEndY; // Обновляем позицию для следующего движения
                     }
+
+                    if (currentTime - lastTouchTime < touchDelay) {
+                        e.preventDefault();
+                        return;
+                    }
+
+                    e.preventDefault();
+                    isAnimating = true;
+                    lastTouchTime = currentTime;
+
+                    serviceSwiper.slideNext();
+                    touchStartY = touchEndY;
+
+                    setTimeout(() => {
+                        isAnimating = false;
+                    }, 600);
                 }
-        
+
                 // Скроллим вверх
                 if (scrollingUp) {
                     if (serviceSwiper.isBeginning) {
                         return;
-                    } else {
-                        if (currentTime - lastScrollTime < scrollDelay) {
-                            e.preventDefault();
-                            return;
-                        }
-        
-                        e.preventDefault();
-                        lastScrollTime = currentTime;
-                        serviceSwiper.slidePrev();
-                        touchStartY = touchEndY; // Обновляем позицию для следующего движения
                     }
+
+                    if (currentTime - lastTouchTime < touchDelay) {
+                        e.preventDefault();
+                        return;
+                    }
+
+                    e.preventDefault();
+                    isAnimating = true;
+                    lastTouchTime = currentTime;
+
+                    serviceSwiper.slidePrev();
+                    touchStartY = touchEndY;
+
+                    setTimeout(() => {
+                        isAnimating = false;
+                    }, 600);
+                }
+
+                // Prevent scroll on smaller movements
+                if (Math.abs(touchDiff) > 15) {
+                    e.preventDefault();
                 }
             },
             { passive: false }
         );
-        
-        // Сброс флага при изменении размера окна (если переключаемся с мобильного на десктоп)
-        window.addEventListener('resize', function() {
+
+        // Сброс при изменении размера окна
+        window.addEventListener("resize", function () {
             if (!isMobile()) {
                 swiperDisabled = false;
             }
+            accumulatedDelta = 0;
+            isAnimating = false;
         });
     });
 };

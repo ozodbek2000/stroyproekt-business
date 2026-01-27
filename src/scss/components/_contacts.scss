@@ -6,7 +6,7 @@
     &__bg-undertitle {
         position: absolute;
         top: -250px;
-        left: 0;
+        left: 5%;
     }
 
     &__subtitle {
@@ -54,6 +54,7 @@
 
         &_condifential {
             margin-top: 20px;
+            font-size: 14px;
             a {
                 color: var(--gold);
                 text-decoration: underline;
@@ -102,6 +103,7 @@
                 z-index: 1;
             }
             &:hover {
+                border: 1px solid var(--gold);
                 span {
                     color: var(--gold);
                 }
@@ -153,7 +155,7 @@
         &__bg-undertitle {
             position: absolute;
             top: -175px;
-            left: 0;
+            left: 5%;
         }
 
         &__columns {

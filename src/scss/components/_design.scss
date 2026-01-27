@@ -9,13 +9,13 @@
 
     &__bg-undertitle {
         bottom: 100px;
-        left: 0;
+        left: 5%;
     }
 
     &__bg-title {
         position: absolute;
         top: -250px;
-        right: -40%;
+        right: -10%;
         white-space: nowrap;
     }
 
@@ -181,6 +181,9 @@
                 grid-column-start: 1;
                 grid-column-end: 3;
                 order: 4;
+                p {
+                    font-weight: 300;
+                }
                 ul {
                     display: flex;
                     flex-direction: column;
