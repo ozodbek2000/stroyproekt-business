@@ -20,6 +20,7 @@
 @use "components/gallery";
 @use "components/contacts";
 @use "components/footer";
+@use "components/building";
 
 
 [class*="__container"] {
@@ -28,6 +29,7 @@
     padding: 0px 15px;
     min-width: 0;
 }
+
 body {
     color: var(--black);
     font-family: var(--suisse);

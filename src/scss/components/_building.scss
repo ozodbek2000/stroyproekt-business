@@ -1,0 +1,415 @@
+.building {
+    margin: 200px 0px 0px 0px;
+    position: relative;
+    height: 873px;
+
+    &__levels {
+        position: absolute;
+        top: calc(50% - 365px);
+        left: calc(50% - 340px);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        span {
+            font-size: 24px;
+            color: var(--white);
+            font-weight: 500;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s ease all;
+        }
+    }
+
+    @for $i from 2 through 11 {
+        &
+            > svg[data-index="#{$i}"]:hover
+            ~ .building__popup[data-index="#{$i}"] {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &
+            > svg[data-index="#{$i}"]:hover
+            ~ .building__levels
+            span[data-index="#{$i}"] {
+            background-color: var(--white);
+            color: var(--black);
+        }
+    }
+
+    &__bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-position: center;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+    }
+    &__2,
+    &__3,
+    &__4,
+    &__5,
+    &__6,
+    &__7,
+    &__8,
+    &__9,
+    &__10,
+    &__11 {
+        position: absolute;
+        z-index: 22;
+        pointer-events: none;
+    }
+    &__2 {
+        top: calc(50% + 165px);
+        left: calc(50% - 277px);
+    }
+    &__3 {
+        top: calc(50% + 100px);
+        left: calc(50% - 277px);
+    }
+    &__4 {
+        top: calc(50% + 36px);
+        left: calc(50% - 278px);
+    }
+    &__5 {
+        top: calc(50% - 28px);
+        left: calc(50% - 278px);
+    }
+    &__6 {
+        top: calc(50% - 92px);
+        left: calc(50% - 278px);
+    }
+    &__7 {
+        top: calc(50% - 156px);
+        left: calc(50% - 278px);
+    }
+    &__8 {
+        top: calc(50% - 220px);
+        left: calc(50% - 278px);
+    }
+    &__9 {
+        top: calc(50% - 284px);
+        left: calc(50% - 278px);
+    }
+    &__10 {
+        top: calc(50% - 348px);
+        left: calc(50% - 278px);
+    }
+    &__11 {
+        top: calc(50% - 338px);
+        left: calc(50% - 61px);
+    }
+
+    &__popup {
+        position: absolute;
+        background-color: var(--white);
+        z-index: 1;
+        padding: 16px;
+        width: 294px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease all;
+
+        &[data-index="2"] {
+            top: calc(50% + 160px);
+            left: calc(50% + 277px);
+        }
+        &[data-index="3"] {
+            top: calc(50% + 130px);
+            left: calc(50% + 277px);
+        }
+        &[data-index="4"] {
+            top: calc(50% + 100px);
+            left: calc(50% + 277px);
+        }
+        &[data-index="5"] {
+            top: calc(50% + 70px);
+            left: calc(50% + 277px);
+        }
+        &[data-index="6"] {
+            top: calc(50% + 40px);
+            left: calc(50% + 277px);
+        }
+        &[data-index="7"] {
+            top: calc(50% + 10px);
+            left: calc(50% + 277px);
+        }
+        &[data-index="8"] {
+            top: calc(50% - 20px);
+            left: calc(50% + 277px);
+        }
+        &[data-index="9"] {
+            top: calc(50% - 50px);
+            left: calc(50% + 277px);
+        }
+        &[data-index="10"] {
+            top: calc(50% - 80px);
+            left: calc(50% + 277px);
+        }
+        &[data-index="11"] {
+            top: calc(50% - 110px);
+            left: calc(50% + 277px);
+        }
+
+        &_title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba($color: #7a5e48, $alpha: 0.2);
+            h3 {
+                font-size: 36px;
+                font-weight: 500;
+                span {
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+            }
+        }
+        &_item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p {
+                font-size: 12px;
+                font-weight: 300;
+            }
+            span {
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    path {
+        transition: 0.3s ease fill-opacity;
+        z-index: 22;
+        pointer-events: all;
+        cursor: pointer;
+    }
+    path:hover {
+        fill-opacity: 0.7;
+    }
+}
+
+@media (max-width: 767px) {
+    .building {
+        margin: 66px 0px 0px 0px;
+        position: relative;
+        height: 800px;
+
+        &__levels {
+            position: absolute;
+            top: calc(50% - 365px);
+            left: calc(38% - 150px);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            span {
+                font-size: 24px;
+                color: var(--white);
+                font-weight: 500;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 0.3s ease all;
+            }
+        }
+
+        @for $i from 2 through 11 {
+            &
+                > svg[data-index="#{$i}"]:hover
+                ~ .building__popup[data-index="#{$i}"],
+            .building__popup[data-index="#{$i}"] {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            &
+                > svg[data-index="#{$i}"]:hover
+                ~ .building__levels
+                span[data-index="#{$i}"] {
+                background-color: var(--white);
+                color: var(--black);
+            }
+        }
+
+        &__bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            object-position: 38%;
+            top: 0;
+            left: 0;
+        }
+        &__2,
+        &__3,
+        &__4,
+        &__5,
+        &__6,
+        &__7,
+        &__8,
+        &__9,
+        &__10,
+        &__11 {
+            position: absolute;
+            z-index: 22;
+            pointer-events: none;
+        }
+
+        &__2 {
+            top: calc(50% + 151px);
+            left: calc(38% - 42px);
+            width: 465px;
+            height: 105px;
+        }
+        &__3 {
+            top: calc(50% + 100px);
+            left: calc(38% - 96px);
+            width: 490.5px;
+            height: 138.5px;
+        }
+        &__4 {
+            top: calc(50% + 36px);
+            left: calc(38% - 96px);
+        }
+        &__5 {
+            top: calc(50% - 28px);
+            left: calc(38% - 96px);
+        }
+        &__6 {
+            top: calc(50% - 92px);
+            left: calc(38% - 96px);
+        }
+        &__7 {
+            top: calc(50% - 156px);
+            left: calc(38% - 96px);
+        }
+        &__8 {
+            top: calc(50% - 220px);
+            left: calc(38% - 96px);
+        }
+        &__9 {
+            top: calc(50% - 284px);
+            left: calc(38% - 96px);
+        }
+        &__10 {
+            top: calc(50% - 348px);
+            left: calc(38% - 96px);
+        }
+        &__11 {
+            top: calc(50% - 338px);
+            left: calc(38% + 121px);
+        }
+
+        &__popup {
+            position: absolute;
+            background-color: var(--white);
+            z-index: 1;
+            padding: 16px;
+            width: 294px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s ease all;
+
+            &[data-index="2"] {
+                top: calc(50% + 160px);
+                left: calc(50% + 277px);
+            }
+            &[data-index="3"] {
+                top: calc(50% + 130px);
+                left: calc(50% + 277px);
+            }
+            &[data-index="4"] {
+                top: calc(50% + 100px);
+                left: calc(50% + 277px);
+            }
+            &[data-index="5"] {
+                top: calc(50% + 70px);
+                left: calc(50% + 277px);
+            }
+            &[data-index="6"] {
+                top: calc(50% + 40px);
+                left: calc(50% + 277px);
+            }
+            &[data-index="7"] {
+                top: calc(50% + 10px);
+                left: calc(50% + 277px);
+            }
+            &[data-index="8"] {
+                top: calc(50% - 20px);
+                left: calc(50% + 277px);
+            }
+            &[data-index="9"] {
+                top: calc(50% - 50px);
+                left: calc(50% + 277px);
+            }
+            &[data-index="10"] {
+                top: calc(50% - 80px);
+                left: calc(50% + 277px);
+            }
+            &[data-index="11"] {
+                top: calc(50% - 110px);
+                left: calc(50% + 277px);
+            }
+
+            &_title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-bottom: 12px;
+                border-bottom: 1px solid rgba($color: #7a5e48, $alpha: 0.2);
+                h3 {
+                    font-size: 36px;
+                    font-weight: 500;
+                    span {
+                        font-size: 12px;
+                        font-weight: 500;
+                    }
+                }
+            }
+            &_item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                p {
+                    font-size: 12px;
+                    font-weight: 300;
+                }
+                span {
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        path {
+            transition: 0.3s ease fill-opacity;
+            z-index: 22;
+            pointer-events: all;
+            cursor: pointer;
+        }
+        path:hover {
+            fill-opacity: 0.7;
+        }
+        svg.active {
+            path {
+                fill-opacity: 0.7;
+            }
+        }
+    }
+}

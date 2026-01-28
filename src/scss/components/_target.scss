@@ -109,14 +109,23 @@
         display: none;
     }
 
+    .target__subtitle {
+        font-weight: 350;
+        margin-bottom: 24px;
+        
+        svg {
+            flex-shrink: 0;
+        }
+    }
+
     .target__animation-container {
         height: auto;
         min-height: 800px;
     }
 
     .target__container {
-        padding: 66px 20px 40px 20px;
-        opacity: 1; // На мобильных виден сразу
+        padding: 66px 20px 40px 20px !important;
+        opacity: 1;
         visibility: visible;
     }
 
@@ -133,7 +142,7 @@
 
     .target__item {
         font-size: 18px;
-        height: 80px;
-        padding: 0px 20px;
+        height: 120px;
+        padding: 0px 32px;
     }
 }

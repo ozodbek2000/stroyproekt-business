@@ -322,4 +322,13 @@ input {
     }
     input {
     }
+
+    .overlay {
+
+        &.green {
+            background-color: rgba($color: #40664C, $alpha: 0.5);
+            z-index: 0;
+        }
+
+    }
 }

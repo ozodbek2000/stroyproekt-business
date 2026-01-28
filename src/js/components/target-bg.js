@@ -30,6 +30,7 @@ const targetBg = () => {
             borderRadius: "0px",
             duration: 0.6,
             ease: "none",
+            filter: "brightness(0.5)",
         },
         0
     );
