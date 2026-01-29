@@ -208,8 +208,8 @@
 
         &__levels {
             position: absolute;
-            top: calc(50% - 365px);
-            left: calc(38% - 150px);
+            top: calc(50% - 379px);
+            left: calc(39% - 120px);
             display: flex;
             flex-direction: column;
             gap: 12px;
@@ -224,6 +224,10 @@
                 align-items: center;
                 justify-content: center;
                 transition: 0.3s ease all;
+                &.active {
+                    background-color: var(--white);
+                    color: var(--black);
+                }
             }
         }
 
@@ -231,9 +235,10 @@
             &
                 > svg[data-index="#{$i}"]:hover
                 ~ .building__popup[data-index="#{$i}"],
-            .building__popup[data-index="#{$i}"] {
+            .building__popup[data-index="#{$i}"].active {
                 opacity: 1;
                 visibility: visible;
+                z-index: 0;
             }
 
             &
@@ -249,7 +254,7 @@
             width: 100%;
             height: 100%;
             position: absolute;
-            object-position: 38%;
+            object-position: 39%;
             top: 0;
             left: 0;
         }
@@ -264,53 +269,81 @@
         &__10,
         &__11 {
             position: absolute;
-            z-index: 22;
+            z-index: 0;
             pointer-events: none;
+            user-select: none;
+        }
+
+        path {
+            transition: 0.3s ease fill-opacity;
+            z-index: 22;
+            pointer-events: all;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
         }
 
         &__2 {
             top: calc(50% + 151px);
-            left: calc(38% - 42px);
+            left: calc(39% - 60px);
             width: 465px;
             height: 105px;
         }
         &__3 {
-            top: calc(50% + 100px);
-            left: calc(38% - 96px);
+            top: calc(50% + 92px);
+            left: calc(39% - 63px);
             width: 490.5px;
             height: 138.5px;
         }
         &__4 {
-            top: calc(50% + 36px);
-            left: calc(38% - 96px);
+            top: calc(50% + 34px);
+            left: calc(39% - 61px);
+            width: 471px;
+            height: 164px;
         }
         &__5 {
-            top: calc(50% - 28px);
-            left: calc(38% - 96px);
+            top: calc(50% - 25px);
+            left: calc(39% - 61px);
+            width: 471px;
+            height: 191.5px;
         }
         &__6 {
-            top: calc(50% - 92px);
-            left: calc(38% - 96px);
+            top: calc(50% - 84px);
+            left: calc(39% - 61px);
+            width: 469px;
+            height: 219.5px;
         }
         &__7 {
-            top: calc(50% - 156px);
-            left: calc(38% - 96px);
+            top: calc(50% - 142px);
+            left: calc(39% - 61px);
+            width: 469px;
+            height: 245.5px;
         }
         &__8 {
-            top: calc(50% - 220px);
-            left: calc(38% - 96px);
+            top: calc(50% - 200px);
+            left: calc(39% - 60px);
+            width: 470px;
+            height: 275px;
         }
         &__9 {
-            top: calc(50% - 284px);
-            left: calc(38% - 96px);
+            top: calc(50% - 261px);
+            left: calc(39% - 60px);
+            width: 478.5px;
+            height: 310.65px;
         }
         &__10 {
-            top: calc(50% - 348px);
-            left: calc(38% - 96px);
+            top: calc(50% - 321px);
+            left: calc(39% - 61px);
+            width: 483px;
+            height: 344px;
         }
         &__11 {
-            top: calc(50% - 338px);
-            left: calc(38% + 121px);
+            top: calc(50% - 308px);
+            left: calc(39% + 137px);
+            width: 243.5px;
+            height: 246px;
         }
 
         &__popup {
@@ -318,7 +351,7 @@
             background-color: var(--white);
             z-index: 1;
             padding: 16px;
-            width: 294px;
+            width: 220px;
             display: flex;
             flex-direction: column;
             gap: 8px;
@@ -327,44 +360,44 @@
             transition: 0.3s ease all;
 
             &[data-index="2"] {
-                top: calc(50% + 160px);
-                left: calc(50% + 277px);
+                top: calc(50% + 120px);
+                left: calc(39% + 7px);
             }
             &[data-index="3"] {
-                top: calc(50% + 130px);
-                left: calc(50% + 277px);
+                top: calc(50% + 65px);
+                left: calc(39% + 7px);
             }
             &[data-index="4"] {
-                top: calc(50% + 100px);
-                left: calc(50% + 277px);
+                top: calc(50% + 10px);
+                left: calc(39% + 7px);
             }
             &[data-index="5"] {
-                top: calc(50% + 70px);
-                left: calc(50% + 277px);
+                top: calc(50% - 45px);
+                left: calc(39% + 7px);
             }
             &[data-index="6"] {
-                top: calc(50% + 40px);
-                left: calc(50% + 277px);
+                top: calc(50% - 100px);
+                left: calc(39% + 7px);
             }
             &[data-index="7"] {
-                top: calc(50% + 10px);
-                left: calc(50% + 277px);
+                top: calc(50% - 155px);
+                left: calc(39% + 7px);
             }
             &[data-index="8"] {
-                top: calc(50% - 20px);
-                left: calc(50% + 277px);
+                top: calc(50% - 210px);
+                left: calc(39% + 7px);
             }
             &[data-index="9"] {
-                top: calc(50% - 50px);
-                left: calc(50% + 277px);
+                top: calc(50% - 265px);
+                left: calc(39% + 7px);
             }
             &[data-index="10"] {
-                top: calc(50% - 80px);
-                left: calc(50% + 277px);
+                top: calc(50% - 320px);
+                left: calc(39% + 7px);
             }
             &[data-index="11"] {
-                top: calc(50% - 110px);
-                left: calc(50% + 277px);
+                top: calc(50% - 375px);
+                left: calc(39% + 7px);
             }
 
             &_title {

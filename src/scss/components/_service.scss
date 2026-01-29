@@ -1,10 +1,10 @@
 .service {
-    margin: 200px 0px 0px 0px;
+    margin: 244px 0px 0px 0px;
     position: relative;
 
     &__bg-undertitle {
         position: absolute;
-        top: -250px;
+        top: -270px;
         left: 5%;
         bottom: inherit;
     }
@@ -89,7 +89,7 @@
 
 @media (max-width: 767px) {
     .service {
-        margin: 169px 0px 0px 0px;
+        margin: 132px 0px 0px 0px;
         position: relative;
 
         &__bg-undertitle {

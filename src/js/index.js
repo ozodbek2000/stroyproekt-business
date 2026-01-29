@@ -10,6 +10,7 @@ import gsapAnimate from "./components/gsap-animate";
 import designItem from "./components/design-item";
 import scroll from "./components/scroll";
 import targetBg from "./components/target-bg";
+import scrollBorder from "./components/scroll-border";
 
 $(document).ready(function () {
     toggle();
@@ -23,4 +24,5 @@ $(document).ready(function () {
     designItem();
     scroll();
     targetBg();
+    scrollBorder();
 });

@@ -2,7 +2,9 @@
     margin-top: 100px;
     padding: 48px 0px;
     border-top: 1px solid rgba($color: #72584f, $alpha: 0.3);
+
     &__container {
+        position: relative;
     }
 
     &__columns {
